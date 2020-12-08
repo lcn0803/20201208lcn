@@ -1,0 +1,48 @@
+		<meta charset="UTF-8">
+		<style type="text/css">
+			.model_zzsc{
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.5);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.sc_div{
+				width: 63%;
+				background-color: rgba(0,0,0,0.01);
+				position: relative;
+			}
+			.sc_div .title{font-size: 24px;color: #ddd;text-align: center;margin: 30px 0 0px;background-color: rgba(0,0,0,0.01);}
+			
+			.load_img{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.load_img svg{
+				width: 88px;height: 88px;
+				animation:myRotate 1.5s linear  infinite;
+				-moz-animation:myRotate 1.5s linear  infinite;
+				-webkit-animation:myRotate 1.5s linear  infinite;
+				-o-animation:myRotate 1.5s linear  infinite;
+				-ms-animation:myRotate 1.5s linear  infinite;
+			}
+			
+		</style>
+		<ion-model-view>
+		<div class="model_zzsc" >
+			<div class="sc_div">
+				<div class="title">
+					<span>{{load_text?load_text:'请稍后,加载中……'}}</span>
+				</div>
+				<div class="load_img">
+					<ion-spinner icon="lines" class="spinner-calm"></ion-spinner>
+				</div>
+			</div>
+		</div>
+		</ion-modal-view>

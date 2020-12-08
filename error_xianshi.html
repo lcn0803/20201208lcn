@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/ionic.min.css" />
+		<script src="js/zepto_1.1.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ionic.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			.model_error_shuzi{
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.5);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.error_shuzi_div{
+				width: 83%;
+				background-color: #fff;
+				position: relative;
+			}
+			.error_shuzi_div .title{font-size: 18px;color: #808080;text-align: center;margin: 20px 0 25px;}
+			
+			.error_shuzi_div .error_shuzi_info{display: flex;flex-direction: column; justify-content: center;align-items: center;}
+			.error_shuzi_div .error_shuzi_info .img_div1 img{width: 100%;height: 100%;}
+			.error_shuzi_div .error_shuzi_info .img_div1{width: 126px;height: 100px;}
+			.error_shuzi_div .error_shuzi_info .txt_div1{color: #808080;margin: 25px 0;}
+			.error_shuzi_div .xz_info .txt_div1>span{font-size: 14px;}
+			.error_shuzi_div .btn_div{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 10px;
+				margin-top: 0;
+			}
+			.error_shuzi_div .btn_div button{
+				width: 115px;height: 33px;box-sizing: border-box;border: 2px solid #505050;
+				background-color: transparent;
+				color: #505050;
+				letter-spacing: 2px;
+			}
+			.ckxz_div{
+				margin-bottom: 30px;
+				text-align: center;
+				font-size: 14px;
+				color: #808080;
+			}
+			.ckxz_div a{text-decoration: underline;color: #1697e9;}
+			.bj{
+				position: absolute;width: 20px;height: 20px;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			.bj.zsj{background-image: url('img/smrz/左上角@2x.svg');top: 10px;left: 10px;}
+			.bj.ysj{background-image: url('img/smrz/右上角@2x.svg');top: 10px;right: 10px;}
+			.bj.zxj{background-image: url('img/smrz/左下角@2x.svg');bottom: 10px;left: 10px;}
+			.bj.yxj{background-image: url('img/smrz/右下角@2x.svg');bottom: 10px;right: 10px;}
+		</style>
+	</head>
+	<body>
+		<div class="model_error_shuzi">
+			<div class="error_shuzi_div">
+				<div class="title">
+					<span>证件显示不完整</span>
+				</div>
+				<div class="error_shuzi_info">
+					<div class="img_div1">
+						<img src="img/smrz/icon_bianjiao@2x.svg"/>
+					</div>
+					<div class="txt_div1">
+						<span>请确保拍摄身份证边角完整</span>
+					</div>
+				</div>
+				
+				<div class="btn_div">
+					<button  ng-click="model_xianshi.hide()">确定</button>
+				</div>
+				<div class="ckxz_div">
+						<span>查看<a href="javascript:void(0);" ng-click="model_psxz.show()">视频拍摄须知</a></span>
+				</div>
+				<i class="bj zsj"></i>
+				<i class="bj ysj"></i>
+				<i class="bj zxj"></i>
+				<i class="bj yxj"></i>
+				
+			</div>
+		</div>
+	</body>
+</html>
